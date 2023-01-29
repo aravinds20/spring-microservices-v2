@@ -1,0 +1,12 @@
+#To create an image, add this in pom.xml
+
+<image>
+	<name>aravind/mmv2-${project.artifactId}:${project.version}</name>
+</image>
+<pullPolicy>
+	IF_NOT_PRESENT
+</pullPolicy>
+
+
+#Run as maven build.
+spring-boot:build-image -DskipTests
